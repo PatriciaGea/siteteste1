@@ -1,7 +1,7 @@
 
 # Hey! 👋 I’m Patricia Gea  
 
-🎨 Tattoo Artist | ✏️ Graphic Designer | 💻 Digital Design Student at Hyper Island, Stockholm  
+🎨 Tattoo Artist | ✏️ Graphic Designer | 💻 Front End Student at Hyper Island, Stockholm  
 
 Currently learning and exploring:  
 - Web development (HTML, CSS, and JavaScript)  
