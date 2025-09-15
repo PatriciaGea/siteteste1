@@ -1,0 +1,180 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%; /* garante altura total */
+  font-family: 'Arial', sans-serif; /* fonte padrão da página */
+  font: size 1rem;;
+}
+p {
+  text-indent: 30px; /* recuo da primeira linha */
+}
+/* O container ocupa toda a tela */
+.container {
+    display: flexbox;       /* coloca as divs EM grid e FILEIRA */
+   
+    width: 100vw;        /* largura da tela inteira */
+}
+/* Primeira faixa - ângulo 45° */
+
+body {
+  background: #222;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* base da faixa */
+.faixa {
+  position: fixed;
+  left: 0;
+  width: 50%;        /* comprimento da diagonal */
+  height: 20px;      /* espessura da linha */
+  background: white;
+  transform-origin: left center;
+}
+
+/* zigzag - alternando ângulos e top */
+.faixa1 {
+  top: 100px;
+  transform: rotate(-45deg);
+}
+
+.faixa2 {
+  top: 160px;
+  transform: rotate(45deg);
+}
+
+.faixa3 {
+  top: 220px;
+  transform: rotate(-45deg);
+}
+
+.faixa4 {
+  top: 280px;
+  transform: rotate(45deg);
+}
+
+.menu {
+  background: #1e1e1e;
+  display: flex;
+  align-items: center; /* centraliza vertical */
+  justify-content: center; /* centraliza horizontal */
+  font-size: 0,5em;
+}
+
+/* Cada bloco dentro do container */
+
+.box {
+     
+      display: flex;
+      align-items: center; /* centraliza vertical */
+      justify-content: center; /* centraliza horizontal */
+      font-size: 0,5em;
+      color: #FFFF;
+      background-color: #fafbfb;
+    }
+
+ .box1 {
+  width: 100%;               /* largura total da tela */
+  height: 50vw;
+
+  background-image: url('/images/bg_tattoo_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;    
+  background-position: center;
+
+  display: flex;             /* ativa Flexbox */
+  justify-content: center;   /* centraliza horizontal */
+  align-items: center;       /* centraliza vertical */
+  text-align: center;
+  font-size: 5vw;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.box1 h1 {
+  font-size: clamp(24px, 5vw, 112px);  /* tamanho proporcional ao tamanho da tela */
+  color: white;
+}
+    .box2 { background-color: white; border-color: #1e1e1e; }
+    .box3 { background-color: #2ecc71; }
+    .box4 { background-color: #9b59b6; }
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  margin-top: 0;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;        /* permite quebrar para a linha de baixo */
+  justify-content: center;
+  gap: 20px;
+  font-size: 0,5em;
+}
+
+
+a {
+  display: flexbox;
+  
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #575757;
+}
+.circle {
+  width: clamp(100px, 80%, 500px); /* responsivo */
+  aspect-ratio: 1 / 1;             /* mantém altura = largura */
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;}
+
+.circle img {
+  width: 100%;          /* ocupa toda largura do círculo */
+  height: 100%;         /* ocupa toda altura do círculo */
+  object-fit: cover;    /* mantém proporção, sem distorcer */
+  position: absolute;   
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.circle img.second {
+  opacity: 0;           /* começa invisível */
+}
+
+.circle:hover img.first {
+  opacity: 0;
+}
+
+.circle:hover img.second {
+  opacity: 1;
+}
+/* Div interna */
+.inner {
+  display: flex;          /* ativa flexbox */
+  gap: 2rem;              /* espaço entre as colunas */
+  flex-wrap: wrap;        /* para mobile quebra linha se necessário */
+  width: 90%;
+  margin: auto;
+}
+
+/* Partes */
+.left {
+  flex: 3;                 /* equivale a 30% */
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.right {
+  flex: 7;                 /* equivale a 70% */
+  background: white;
+  padding: 20px;
+  text-align: left;
+  color: #1e1e1e;
+  font-size: 1em;
+}
